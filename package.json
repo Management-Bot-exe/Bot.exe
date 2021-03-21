@@ -1,0 +1,22 @@
+{
+    "name": "dev-bot2.exe",
+    "version": "1.0.0",
+    "description": "This is my own bot...",
+    "main": "main.js",
+    "scripts": {
+      "start": "node main.js"
+    },
+    "keywords": [
+      "bot"
+    ],
+    "author": "Commander R#9371",
+    "license": "ISC",
+    "dependencies": {
+      "common-tags": "^1.8.0",
+      "discord.js": "^12.5.1",
+      "moment": "^2.29.1",
+      "yt-search": "^2.7.4",
+      "ytdl-core": "^4.5.0"
+    }
+  }
+  
