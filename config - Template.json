@@ -1,4 +1,5 @@
 {
     "token": "YOUR_BOT_TOKEN_HERE",
-    "prefix": "YOUR_BOT_PREFIX_HERE"
+    "prefix": "YOUR_BOT_PREFIX_HERE",
+    "blockedUsers": ["", ""]
 }
