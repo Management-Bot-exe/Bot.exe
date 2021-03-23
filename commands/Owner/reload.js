@@ -6,10 +6,12 @@ module.exports = {
 	description: 'Reloads a command',
 	args: true,
 	execute(message, args) {
+
 		const commandName = args[0].toLowerCase();
 		const command = message.client.commands.get(commandName)
 			|| message.client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
-			if(message.channel.send() === 'DM') return;
+			if (message.channel.type === 'dm') 
+        message.channel.send(`You can't do this in a DM message.`); else;
 			if(message.member.roles.cache.has('812673380527505408')){		
 				
 

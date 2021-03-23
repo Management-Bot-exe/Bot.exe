@@ -5,6 +5,10 @@ module.exports = {
 	description: 'Displays a list of Bot.exe\'s joined servers.',
 	args: false,
   execute(message, args) {
+
+    if (message.channel.type === 'dm') 
+        message.channel.send(`You can't do this in a DM message.`); else
+
     if(message.member.roles.cache.has('812673380527505408')){
 
     const servers = message.client.guilds.cache.array().map(guild => {

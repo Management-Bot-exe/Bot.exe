@@ -1,10 +1,10 @@
+
+
 module.exports = {
     name: 'verify',
     description: 'Verify yourself here',
     execute(message, args){
-        
         let role = message.guild.roles.cache.find(r => r.name === "Verified");
-
         if(message.member.roles.cache.some(r => r.name === "Verified") ) {
 
             message.reply(`You already are verified :partying_face:`);

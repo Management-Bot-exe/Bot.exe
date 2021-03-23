@@ -16,27 +16,31 @@ module.exports = {
         .setAuthor(`Commander R#9371`)
         .setDescription(`These are all the commands the bot can do at the moment!`)
         .addField("verification", `
-${prefix}verify`)
+    ${prefix}verify`)
 		.addField("Utility", `
-${prefix}args-info
-${prefix}avatar
-${prefix}help
-${prefix}invite
-${prefix}serverinfo
-${prefix}support
-${prefix}userinfo
-${prefix}website
-${prefix}ping`)
+    ${prefix}args-info
+    ${prefix}avatar
+    ${prefix}help
+    ${prefix}invite
+    ${prefix}serverinfo
+    ${prefix}support
+    ${prefix}userinfo
+    ${prefix}website
+    ${prefix}ping`)
 		.addField("Moderation", `
-${prefix}ban
-${prefix}kick
-${prefix}purge
-${prefix}svm`)
+    ${prefix}ban
+    ${prefix}kick
+    ${prefix}purge
+    ${prefix}svm`)
 		.addField("**Owner Only!**", `
-${prefix}reload
-${prefix}servers
-${prefix}test`)
+    ${prefix}reload
+    ${prefix}servers
+    ${prefix}test`)
         .setFooter(`Bot Coded By Commander R#9371!`)
-        message.channel.send(embed);
+        return message.author.send(embed)
+			.then(() => {
+				if (message.channel.type === 'dm') return;
+				message.reply('I\'ve sent you a DM with all my commands!');
+			})
     }
 };
