@@ -16,26 +16,27 @@ module.exports = {
         .setAuthor(`Commander R#9371`)
         .setDescription(`These are all the commands the bot can do at the moment!`)
         .addField("verification", `
-    ${prefix}verify`)
+${prefix}verify`)
 		.addField("Utility", `
-    ${prefix}args-info
-    ${prefix}avatar
-    ${prefix}help
-    ${prefix}invite
-    ${prefix}serverinfo
-    ${prefix}support
-    ${prefix}userinfo
-    ${prefix}website
-    ${prefix}ping`)
+${prefix}args-info
+${prefix}avatar
+${prefix}help
+${prefix}invite
+${prefix}serverinfo
+${prefix}support
+${prefix}userinfo
+${prefix}website
+${prefix}ping`)
 		.addField("Moderation", `
-    ${prefix}ban
-    ${prefix}kick
-    ${prefix}purge
-    ${prefix}svm`)
+${prefix}ban
+${prefix}kick
+${prefix}purge
+${prefix}svm
+${prefix}poll`)
 		.addField("**Owner Only!**", `
-    ${prefix}reload
-    ${prefix}servers
-    ${prefix}test`)
+${prefix}reload
+${prefix}announce
+${prefix}test`)
         .setFooter(`Bot Coded By Commander R#9371!`)
         return message.author.send(embed)
 			.then(() => {
