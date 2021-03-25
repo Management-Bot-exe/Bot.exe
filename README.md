@@ -9,6 +9,10 @@ Do you have any ideas for commands for me? Join my support server and make a sug
 <br>
 If you want to know the commands you can see them on my [website](https://sites.google.com/view/commander-r-bots-website/) or with ,help.<br>
 <br>
+<p style="font-weight: bold;">How do i set the bot up?</p>
+...
+<>
+<br>
 You can Host me yourself if you want that, [Here](https://github.com/Management-Bot-exe/Bot.exe) you can download the code i'm running.<br>
 <br>
 If you want to join our support server join [here](https://discord.gg/CfRkadyGP6) <br>
