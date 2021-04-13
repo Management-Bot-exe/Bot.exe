@@ -3,7 +3,6 @@ module.exports = {
     description: `Purges the amount of messages that you've given`,
     aliases: ["clear", "clean"],
     permissions: 'MANAGE_MESSAGES',
-    cooldown: 5,
     guildOnly: true,
     async execute(message, args){
         if(!args[0]) return message.reply(`You need to specify an amount of messages to purge!`);

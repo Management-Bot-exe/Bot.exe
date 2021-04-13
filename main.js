@@ -25,7 +25,6 @@ for (const file of eventFiles) {
 		client.on(event.name, (...args) => event.execute(...args, client));
 	}
 }
-
 client.on('message', message => {
 	if (blockedUsers.includes(message.author.id)) return;
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
