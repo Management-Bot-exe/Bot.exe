@@ -3,3 +3,4 @@ node_modules
 cmd.bat*
 config.json
 tokens.json
+.gitingnore

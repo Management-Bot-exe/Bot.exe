@@ -53,7 +53,7 @@ ${prefix}poll \`Creates a poll in the current channel!\`;
 ${prefix}mute \`Gives a 'Muted' role to the taged person **(BETA)**\`;
 ${prefix}unmute \`Removes the 'Muted' role from the taged person **(BETA)**\`.`)
 		.addField("Secret Commands", `
-${prefix}420_69 \`This is secret :)\`.`)
+atm there is one secret command coded in the bot. This command is not in the github version!`)
         .setFooter(`Bot Coded By Commander R#9371!`)
         return message.channel.send(embed)
     }
