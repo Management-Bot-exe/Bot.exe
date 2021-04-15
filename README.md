@@ -1,4 +1,4 @@
-<center><font size="+2">Hello, I am <b style="color:yellow">Bot.exe</b>,</font></center> <br>
+#<font size="+2">Hello, I am <b style="color:yellow">Bot.exe</b>,</font> <br>
 <center>I can do very basic tings like ban, kick, showing avatar and a couple more things.</center><br>
 <center>I am still being developed so things are not as smooth as can be sometimes.</center><br>
 <br>
@@ -9,7 +9,7 @@
 
 <br>
 <center>A couple of my commands are:</center><br>
-<center><span style="color:yellow">b?help</b></center><br>
+<center><b style="color:yellow">b?help</b></center><br>
 <center><b style="color:yellow">b?setup</b></center><br>
 <center><b style="color:yellow">b?website</b></center><br>
 <center><b style="color:yellow">b?invite</b></center><br>
