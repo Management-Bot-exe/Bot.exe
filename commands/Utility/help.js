@@ -16,9 +16,9 @@ module.exports = {
         .setAuthor(`Commander R#9371`)
         .setDescription(`These are all the commands the bot can do at the moment!`)
 		.addField(`Setup`, `
-${prefix}setup`)
+${prefix}setup \`Gives you information on how to set up the bot!\``)
        .addField("verification", `
-${prefix}verify \`Gives the author of the message 'Verified role' THIS ONLY WORKS WHEN YOU HAVE A ROLE CALLED EXACTLY:  'Verified'  **(BETA)**\`;`)
+${prefix}verify \`Gives the author of the message 'Verified role' \nTHIS ONLY WORKS WHEN YOU HAVE A ROLE CALLED EXACTLY: 'Verified'  **(BETA)**\`;`)
 		.addField(`Fun`, `
 ${prefix}8ball \`Gets a random answer for your question\`;
 ${prefix}beep \`Boop!\`;
@@ -53,7 +53,7 @@ ${prefix}poll \`Creates a poll in the current channel!\`;
 ${prefix}mute \`Gives a 'Muted' role to the taged person **(BETA)**\`;
 ${prefix}unmute \`Removes the 'Muted' role from the taged person **(BETA)**\`.`)
 		.addField("Secret Commands", `
-atm there is one secret command coded in the bot. This command is not in the github version!`)
+atm there are a couple secret commands coded in the bot. This command is not in the github repository!`)
         .setFooter(`Bot Coded By Commander R#9371!`)
         return message.channel.send(embed)
     }

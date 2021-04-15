@@ -12,6 +12,7 @@ module.exports = {
         .setAuthor(`${message.author.username}`)
         .setDescription(`This message shows you how to set the bot up!`)
         .addField(`Verification Setup`, `Make a role called 'Verified'. And make sure that that role can access the channels all verified users needs to see!`)
+        .addField(`Muting Setup`, `If you haven't already created a role called 'Muted' then go ahead and do that.\nIf you've done that, set the correct permissions for every channel so people with the @Muted Role can't chat in those channels!`)
         .addField(`TIP`, `You can go to the server settings in the role section you can go to the everyone role and disable the permission "VIEW CHANNELS"`)
         .addField(`**Links:**`, `
 click [here](https://fateslist.xyz) to go to fateslist the bot list!
