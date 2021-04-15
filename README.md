@@ -9,7 +9,7 @@
 
 <br>
 <center>A couple of my commands are:</center><br>
-<center><b style="color:yellow">b?help</b></center><br>
+<center><span style="color:yellow">b?help</b></center><br>
 <center><b style="color:yellow">b?setup</b></center><br>
 <center><b style="color:yellow">b?website</b></center><br>
 <center><b style="color:yellow">b?invite</b></center><br>
