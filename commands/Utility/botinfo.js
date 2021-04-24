@@ -18,7 +18,7 @@ async execute(message, client) {
       .setTitle('Info')
       .setThumbnail('')
       .setColor(`RANDOM`)
-      .addField(`Bot info`, `ID: 784871149695533076\nPublic commands: 28`)
+      .addField(`Bot info`, `ID: 784871149695533076\nPublic commands: 31`)
       .addField(`Bot owner info`, `ID: 271285474516140033\nDeveloper: Commander R#9371`)
       .addField(`Uptime`, `\`\`\`prolog\n${days}, ${hours}, ${minutes}, and ${seconds}\`\`\``)
       .addField('Date Launched:', date) 
