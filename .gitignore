@@ -5,3 +5,7 @@ config.json
 tokens.json
 .gitingnore
 commands/secret commands
+commands/Beta/colors.js
+commands/Beta/color.js
+commands/Owner/reload.js
+commands/Beta/cdc.js

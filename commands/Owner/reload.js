@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { ownerID, coOwnerID, JAYZARID, swagiflyID } = require(`../../config.json`)
+const { ownerID, coOwnerID, JAYZARID, swagiflyID, GlitchID } = require(`../../config.json`)
 
 module.exports = {
 	name: 'reload',
@@ -10,7 +10,7 @@ module.exports = {
 		const commandName = args[0].toLowerCase();
 		const command = message.client.commands.get(commandName) || message.client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 			if (message.channel.type === 'dm') message.channel.send(`You can't do this in a DM message.`); 
-			else if(message.author.id === ownerID || message.author.id === coOwnerID || message.author.id === JAYZARID || message.author.id === swagiflyID){
+			else if(message.author.id === ownerID || message.author.id === coOwnerID || message.author.id === JAYZARID || message.author.id === swagiflyID || message.author.id === GlitchID{
 				
 
 			
