@@ -1,7 +1,7 @@
-const prefix = require(`../config.json`)
+const { prefix } = require(`../config.json`)
 const activities = [
 	{ name: `Commander R's Stream`, type: 'STREAMING', url: "https://twitch.th/rprofile" },
-    { name: `,help`, type: 'LISTENING' },
+    { name: `${prefix}help`, type: 'LISTENING' },
 	{ name: 'your commands', type: 'LISTENING' },
   ];
 

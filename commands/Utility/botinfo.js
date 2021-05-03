@@ -5,7 +5,7 @@ const link = 'https://sites.google.com/view/commander-r-bots-website/bots/bot-ex
 
 module.exports = {
     name: "botinfo",
-    aliases: ["bi", "info"],
+    aliases: ["info", "bi"],
     description: "Info about Bot.exe.",
 async execute(message, client) {
     const d = moment.duration(message.client.uptime);
@@ -18,11 +18,11 @@ async execute(message, client) {
       .setTitle('Info')
       .setThumbnail('')
       .setColor(`RANDOM`)
-      .addField(`Bot info`, `ID: 784871149695533076\nPublic commands: 31`)
-      .addField(`Bot owner info`, `ID: 271285474516140033\nDeveloper: Commander R#9371`)
+      .addField(`Bot info`, `ID: \`784871149695533076\`\nPublic commands: \`32\`\nServer Count: \`${message.client.guilds.cache.size}\``)
       .addField(`Uptime`, `\`\`\`prolog\n${days}, ${hours}, ${minutes}, and ${seconds}\`\`\``)
       .addField('Date Launched:', date) 
-      .addField(`Date First Launch:`, ` December 5th 2020`)
+      .addField(`Date First Launch:`, `\`December 5th 2020\``)
+      .addField(`Bot owner info`, `ID: \`271285474516140033\`\nDeveloper: \`Commander R#9371\`\nAccount created on: \`Wednesday, January 18th 2017\``)
       .addField(`links`, `
 click [here](https://fateslist.xyz) to go to fateslist the bot list!
 click [here](https://discord.com/oauth2/authorize?client_id=784871149695533076&permissions=8&scope=bot) to add me to your server! 

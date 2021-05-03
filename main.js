@@ -1,6 +1,7 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token, blockedUsers } = require('./config.json');
+const config = require('./config.json');
 
 const client = new Discord.Client();
 const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
@@ -26,8 +27,8 @@ for (const file of eventFiles) {
 	}
 }
 client.on('message', message => {
-	if (blockedUsers.includes(message.author.id)) return;
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
+	if (blockedUsers.includes(message.author.id)) return;
 
 	const args = message.content.slice(prefix.length).trim().split(/ +/);
 	const commandName = args.shift().toLowerCase();
@@ -87,5 +88,34 @@ const { cooldowns } = client;
 		message.reply('there was an error trying to execute that command!');
 	}
 });
+
+client.on(`guildCreate`, (guild) => {
+	const emojis = require(`./utils/emojis.json`)
+	const commandLogsChannel = client.guilds.cache.get(`792469092438507521`).client.channels.cache.get('792469093839798284');
+    let defaultChannel = "";
+    guild.channels.cache.forEach((channel) => {
+      if(channel.type == "text" && defaultChannel == "") {
+        if(channel.permissionsFor(guild.me).has("SEND_MESSAGES")) {
+          defaultChannel = channel;
+        }
+      }
+    })
+    defaultChannel.send(`Run \`${config.prefix}setup\` for more info on how to set me up correctly! Thanks for inviting me my developer appriciate it!`);
+    const embed = new Discord.MessageEmbed()
+		.setTitle(`Someone invited me!`)
+		.setAuthor(client.user.username, client.user.displayAvatarURL({ dynamic: true }))
+		.setColor(`#00ff27`)
+		.addField(`Guild i've been added to:`, `\`${guild}\`` + " || " + `\`${guild.name}\`` + ` ${emojis.success}!`)
+		.addField(`Server Count:`, client.guilds.cache.size)
+		.setFooter(`This message was coded by: Commander R#9371 || 271285474516140033`)
+		commandLogsChannel.send(embed)
+		commandLogsChannel.send(`<@271285474516140033>`);
+});
+
+client.on("guildDelete", guild => {
+	console.log(`I've left ${guild.name}`);
+	client.channels.cache.get("792469093839798284").send(new Discord.MessageEmbed().setColor('RED').setDescription(`${client.user} has left **${guild.name}**`)).then(client.channels.cache.get("792469093839798284").send(`<@271285474516140033>`)); 
+	});
+
 
 client.login(token);

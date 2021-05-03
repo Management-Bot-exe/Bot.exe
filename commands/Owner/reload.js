@@ -1,18 +1,16 @@
 const fs = require('fs');
-const { ownerId, coOwnerId } = require(`../../config.json`)
+const { ownerID, coOwnerID, JAYZARID, swagiflyID } = require(`../../config.json`)
 
 module.exports = {
 	name: 'reload',
 	description: 'Reloads a command',
 	args: true,
-	execute(message, args) {
+	async execute(message, args, client) {
 
 		const commandName = args[0].toLowerCase();
-		const command = message.client.commands.get(commandName)
-			|| message.client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
-			if (message.channel.type === 'dm') 
-        message.channel.send(`You can't do this in a DM message.`); else;
-			if(message.member.roles.cache.has('812673380527505408')){		
+		const command = message.client.commands.get(commandName) || message.client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+			if (message.channel.type === 'dm') message.channel.send(`You can't do this in a DM message.`); 
+			else if(message.author.id === ownerID || message.author.id === coOwnerID || message.author.id === JAYZARID || message.author.id === swagiflyID){
 				
 
 			
@@ -33,6 +31,6 @@ module.exports = {
 			console.error(error);
 			message.channel.send(`There was an error while reloading a command \`${command.name}\`:\n\`${error.message}\``);
 		} return;
-		} else(message.reply(`This is an OWNER only command!`))
+		} else message.reply(`This is an STAFF only command!`)
 	},
 };
